@@ -1,4 +1,3 @@
-@@ -0,0 +1,442 @@
 // Top-down red-black tree implementation without deletions,
 // so free() does not appear.
 
@@ -117,7 +116,7 @@ void fixRodd(link h)
 		if (left child of current head is odd)
 		then (increment count of odd keys which are less than head)
 	*/
-	if (( (h->l->item) % 2 != 0) || (h->l->item < h->item) )
+	if (( (h->l->item) % 2 != 0) && (h->l->item < h->item) )
 	{
 		h->RRodd = h->l->RRodd + h->r->RRodd + 1;
 		printf("\t\t\tYes!!!\n");
